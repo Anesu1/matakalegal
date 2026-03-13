@@ -3,9 +3,22 @@
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 100px;
-  background: #fcfcfc;
+  padding-top: 220px;
+  padding-bottom: 120px;
+  background: #fbfbfb;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(115, 184, 184, 0.05));
+  pointer-events: none;
 }
 
 .label {
@@ -14,121 +27,274 @@
   font-weight: 700;
   color: var(--accent-teal);
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .title {
-  font-size: clamp(48px, 6vw, 84px);
+  font-size: clamp(48px, 8vw, 120px);
   font-weight: 300;
-  line-height: 1;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: var(--accent-blue);
+  margin-bottom: 40px;
+}
+
+.titleLine {
+  display: block;
+  overflow: hidden;
+}
+
+.heroDesc {
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.4;
+  font-weight: 300;
+  color: var(--secondary-text);
+  max-width: 680px;
+  opacity: 0.8;
+}
+
+.section {
+  padding: 140px 0;
+}
+
+.stickyLayout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+}
+
+.sidebar {
+  position: relative;
+}
+
+.stickyBox {
+  position: sticky;
+  top: 180px;
+  display: flex;
+  gap: 40px;
+}
+
+.progressLine {
+  width: 2px;
+  height: 200px;
+  background: var(--border-color);
+  position: relative;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.progressFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--accent-teal);
+  border-radius: 2px;
+}
+
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.secTitle {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 300;
+  line-height: 1.1;
   letter-spacing: -0.04em;
   color: var(--accent-blue);
   margin-bottom: 30px;
 }
 
-.heroDesc {
-  font-size: clamp(18px, 2vw, 24px);
-  line-height: 1.5;
-  font-weight: 300;
-  color: var(--secondary-text);
-  max-width: 600px;
-}
-
-.culture {
-  padding: 100px 0;
-}
-
-.cultureGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.cultureItem {
-  padding: 40px;
-  background: white;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-}
-
-.cultureItem:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-}
-
-.icon {
-  color: var(--accent-blue);
-  margin-bottom: 20px;
-}
-
-.cultureTitle {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--accent-blue);
-  margin-bottom: 15px;
-}
-
-.cultureDesc {
-  font-size: 15px;
+.secDesc {
+  font-size: 18px;
   line-height: 1.6;
   color: var(--secondary-text);
   font-weight: 300;
 }
 
-.cta {
-  padding: 100px 0;
+/* Culture Grid */
+.cultureGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cultureItem {
+  padding: 50px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 30px;
+  transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.cultureItem:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 30px 60px rgba(32, 74, 103, 0.08);
+  transform: translateX(10px);
+}
+
+.icon {
+  color: var(--accent-teal);
+}
+
+.cultureTitle {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--accent-blue);
+  margin-bottom: 15px;
+}
+
+.cultureDesc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--secondary-text);
+  font-weight: 300;
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border-color);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 40px;
+  transition: opacity 0.3s ease;
+}
+
+.step:last-child {
+  border-bottom: none;
+}
+
+.stepNum {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-slate);
+  letter-spacing: 0.1em;
+}
+
+.stepContent h4 {
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--accent-blue);
+  margin-bottom: 15px;
+}
+
+.stepContent p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--secondary-text);
+  font-weight: 300;
+  max-width: 500px;
+}
+
+/* FAQ */
+.faqSection {
+  background: #f8f8f8;
+  padding: 140px 0;
+}
+
+.faqGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faqItem {
+  background: white;
+  padding: 40px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  border-color: var(--border-color);
+}
+
+.question {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--accent-blue);
+  margin-bottom: 15px;
+  display: block;
+}
+
+.answer {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--secondary-text);
+  font-weight: 300;
+}
+
+/* CTA */
+.ctaSection {
+  padding: 140px 0;
 }
 
 .ctaBox {
-  padding: 80px;
   background: var(--accent-blue);
-  border-radius: 12px;
+  padding: 100px 60px;
+  border-radius: 4px;
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--accent-slate);
 }
 
-.ctaTitle {
-  font-size: 40px;
+.ctaBox h2 {
+  font-size: clamp(32px, 5vw, 64px);
   font-weight: 300;
-  margin-bottom: 20px;
-}
-
-.ctaDesc {
-  font-size: 18px;
-  margin-bottom: 40px;
-  opacity: 0.8;
+  margin-bottom: 30px;
+  letter-spacing: -0.03em;
 }
 
 .ctaBtn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
+  padding: 20px 45px;
   background: white;
   color: var(--accent-blue);
-  padding: 18px 40px;
   border-radius: 100px;
   font-weight: 700;
-  transition: all 0.3s ease;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .ctaBtn:hover {
   background: var(--accent-teal);
   color: white;
-  transform: scale(1.05);
+  transform: translateY(-5px) scale(1.05);
 }
 
-@media (max-width: 1024px) {
-  .cultureGrid {
+@media (max-width: 1200px) {
+  .stickyLayout {
     grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .stickyBox {
+    position: static;
   }
 }
 
-@media (max-width: 640px) {
-  .ctaBox {
-    padding: 40px 20px;
+@media (max-width: 768px) {
+  .cultureItem, .step {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px;
   }
-  .ctaTitle {
-    font-size: 32px;
+  .ctaBox {
+    padding: 60px 20px;
   }
 }

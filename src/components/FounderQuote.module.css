@@ -35,7 +35,7 @@
   right: -40px;
   font-size: 80px;
   font-weight: 900;
-  color: rgba(32, 74, 103, 0.03);
+  color: rgba(27, 79, 114, 0.03); /* Navy subtle */
   letter-spacing: 0.2em;
   transform: rotate(90deg);
   pointer-events: none;
@@ -62,7 +62,7 @@
 
 .authorDetail {
   padding-left: 40px;
-  border-left: 1px solid var(--accent-teal);
+  border-left: 1px solid var(--accent-slate);
 }
 
 .name {

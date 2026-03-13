@@ -7,21 +7,21 @@ import styles from "./Team.module.css";
 const team = [
   {
     name: "Reuben Mataka",
-    role: "Founder & Principal Partner",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
-    bio: "Visionary legal strategist with 20+ years of excellence."
+    role: "Senior Partner",
+    image: "/images/Reuben-Mataka-Senior-Mataka-Legal-Practice-Partner.webp",
+    bio: "Hardworking and dedicated Legal Practitioner with extensive conveyancing expertise."
   },
   {
     name: "Gregory Nyamupanedengu",
-    role: "Partner & Head of Litigation",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
-    bio: "Veteran litigator defending stakes across all court levels."
+    role: "Partner",
+    image: "/images/Gregory-Nyamupanedengu-Mataka-Legal-Practice-Partner.webp",
+    bio: "Litigation specialist focusing on civil, criminal, and labor law matters."
   },
   {
-    name: "Nonhlanla Ndlovu-Mataka",
-    role: "Legal Practitioner | Conveyancer",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop",
-    bio: "Precision-focused expert in property law and securities."
+    name: "Nonhlanhla Ndlovu-Mataka",
+    role: "Administrator",
+    image: "/images/Nonhlanhla-Ndlovu-Mataka-Mataka-Legal-Practice-Administrator.webp",
+    bio: "Lead administrator and legal practitioner managing global legal operations."
   }
 ];
 

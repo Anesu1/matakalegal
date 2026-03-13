@@ -8,21 +8,21 @@ import styles from "./TeamPage.module.css";
 const team = [
   {
     name: "Reuben Mataka",
-    role: "Founder & Principal Partner",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
-    desc: "Over 15 years of experience in conveyancing, corporate law, and high-stakes litigation. Reuben leads the firm's strategic vision."
+    role: "Senior Partner",
+    image: "/images/Reuben-Mataka-Senior-Mataka-Legal-Practice-Partner.webp",
+    desc: "A hardworking and dedicated Legal Practitioner (LLB Hons, LLM Cand), Reuben established Mataka Legal Practice in January 2018. Formerly Head Conveyancer at J. Mambara and Partners (2008-2017), he brings extensive expertise to the firm's strategic leadership."
   },
   {
     name: "Gregory Nyamupanedengu",
     role: "Partner",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
-    desc: "Renowned for litigation expertise and providing strategic legal counsel across all court levels in Zimbabwe."
+    image: "/images/Gregory-Nyamupanedengu-Mataka-Legal-Practice-Partner.webp",
+    desc: "A registered Legal Practitioner with the LSZ, Gregory heads the Litigation Department. With over 7 years of experience, he specializes in civil and criminal matters, arbitration, and labor law. He previously served as a legal advisor to various Parliamentary Portfolio Committees."
   },
   {
-    name: "Nonhlanla Ndlovu-Mataka",
-    role: "Partner & Administrator",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop",
-    desc: "Oversees firm management and the conveyancing department, specializing in transfers, bonds, and estates."
+    name: "Nonhlanhla Ndlovu-Mataka",
+    role: "Administrator",
+    image: "/images/Nonhlanhla-Ndlovu-Mataka-Mataka-Legal-Practice-Administrator.webp",
+    desc: "A courageous Legal Practitioner (LLB Hons, LLM Cand) responsible for firm management and the conveyancing department. Her extensive experience across Zimbabwe, Botswana, and South Africa ensures meticulous administration and high-quality legal support."
   }
 ];
 

@@ -43,6 +43,7 @@
   width: 100%;
   background: var(--accent-teal);
   border-radius: 2px;
+  box-shadow: 0 0 10px var(--accent-teal);
 }
 
 .sidebarContent {
@@ -89,6 +90,7 @@
   letter-spacing: -0.05em;
   color: var(--accent-teal);
   min-width: 250px;
+  text-shadow: 10px 10px 0px var(--ice-blue);
 }
 
 .content {

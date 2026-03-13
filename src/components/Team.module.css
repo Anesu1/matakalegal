@@ -15,7 +15,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   font-weight: 700;
-  color: var(--accent-teal);
+  color: var(--accent-teal); /* Ocean Teal */
   display: block;
   margin-bottom: 20px;
 }
@@ -68,7 +68,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(32, 74, 103, 0.95);
+  background: rgba(27, 79, 114, 0.95); /* Deep Navy */
   display: flex;
   flex-direction: column;
   justify-content: center;

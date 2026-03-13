@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import styles from "./About.module.css";
 
-const missionText = "To create and unlock value for our stakeholders by delivering tailored and enduring legal solutions that exceed expectations through innovative advocacy.";
+const missionText = "To create and unlock value for our stakeholders by delivering tailored, enduring legal solutions. We are committed to exceeding expectations through excellence, integrity, and a client-focused approach.";
 
 export default function AboutPage() {
   const containerRef = useRef(null);
@@ -26,15 +26,15 @@ export default function AboutPage() {
       <section className={styles.hero}>
         <motion.div style={{ y: heroScroll, opacity: heroOpacity }} className={styles.heroContent}>
           <span className={styles.label}>OUR HERITAGE</span>
-          <h1 className={styles.title}>Legal Excellence <br /> Since 2009</h1>
+          <h1 className={styles.title}>Legal Excellence <br /> Since 2018</h1>
         </motion.div>
         <div className={styles.heroImageWrapper}>
           <motion.img 
             initial={{ scale: 1.2, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5, ease: [0.33, 1, 0.68, 1] }}
-            src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070&auto=format&fit=crop" 
-            alt="Office" 
+            src="/images/team-1024x845.webp" 
+            alt="Mataka Legal Practice Team" 
             className={styles.heroImage}
           />
         </div>
@@ -56,7 +56,7 @@ export default function AboutPage() {
               </div>
               <div className={styles.philosophyRight}>
                 <p className={styles.secDesc}>
-                  At Mataka Legal Practice, we believe that success starts with an outstanding team. We foster a culture of innovation, collaboration, and professional advancement to exceed client expectations.
+                  Mataka Legal Practice (MLP) is a registered law firm founded in Zimbabwe by Reuben Mataka in January 2018 under the Legal Practitioners Act (Chapter 27:07). We specialize in providing comprehensive legal services across a wide range of disciplines, maintaining the highest standards of professional integrity.
                 </p>
                 <div className={styles.values}>
                   {["Speed", "Quality", "Accuracy", "Efficiency", "Flexibility"].map((val, idx) => (

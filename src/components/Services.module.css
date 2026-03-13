@@ -152,8 +152,8 @@
 .cardNumber {
   font-size: 11px;
   font-weight: 700;
-  color: var(--accent-teal);
-  opacity: 0.5;
+  color: var(--accent-slate);
+  opacity: 0.8;
 }
 
 .cardTitle {
@@ -182,7 +182,7 @@
 
 .featureTag {
   padding: 6px 14px;
-  background: #f8f8f8;
+  background: var(--ice-blue);
   border-radius: 100px;
   font-size: 11px;
   font-weight: 600;

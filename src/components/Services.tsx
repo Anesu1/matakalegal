@@ -8,39 +8,63 @@ import styles from "./Services.module.css";
 const practiceAreas = [
   {
     icon: <Landmark size={32} />,
-    title: "Conveyancing & Securities",
-    desc: "Seamless property transfers and robust security documentation.",
-    details: ["Property Sales", "Mortgage Bonds", "Sectional Titles"]
+    title: "Property Law & Conveyancing",
+    desc: "Our Conveyancing Department handles all aspects relating to property law in Zimbabwe, including notarial work.",
+    details: ["Property Transfers", "Notarial Bonds", "Agreements of Sale"]
   },
   {
     icon: <Gavel size={32} />,
-    title: "Civil & Criminal Litigation",
-    desc: "Strategic advocacy across all Zimbabwean court levels.",
-    details: ["Commercial Disputes", "Criminal Defense", "Appeals"]
+    title: "Civil Litigation & ADR",
+    desc: "Focusing on disputes that either reach the High Court or are resolved by arbitration.",
+    details: ["Commercial Disputes", "Arbitration", "High Court Matters"]
   },
   {
-    icon: <Building2 size={32} />,
-    title: "Corporate & Commercial",
-    desc: "Empowering businesses with sound legal structures and compliance.",
-    details: ["Company Secretarial", "M&A", "Governance"]
-  },
-  {
-    icon: <Scale size={32} />,
-    title: "Mining & Energy Law",
-    desc: "Specialized legal support for the extractive industry sector.",
-    details: ["Mining Rights", "Joint Ventures", "Compliance"]
+    icon: <ShieldCheck size={32} />,
+    title: "Criminal Law",
+    desc: "Expert legal representation involving rights of the accused and the criminal process.",
+    details: ["Bail Applications", "Trials", "Pre-trial Hearings"]
   },
   {
     icon: <Users2 size={32} />,
-    title: "Labour & Employment",
-    desc: "Navigating workplace relations with precision and fairness.",
-    details: ["Retrenchments", "Dispute Resolution", "Contracts"]
+    title: "Family Law & Divorce",
+    desc: "Practical solutions to complex problems, protecting interests in difficult personal challenges.",
+    details: ["Divorce Matters", "Child Custody", "Maintenance"]
+  },
+  {
+    icon: <Pickaxe size={32} />,
+    title: "Mining Law",
+    desc: "Assisting investors in developing Zimbabwe's rich mineral wealth through expert legal counsel.",
+    details: ["Investor Support", "Development", "Compliance"]
   },
   {
     icon: <FileText size={32} />,
-    title: "Estate Administration",
-    desc: "Preserving family legacies through meticulous planning.",
-    details: ["Wills", "Trusts", "Deceased Estates"]
+    title: "Intellectual Property",
+    desc: "Registration, protection, and litigation of trade marks, patents, and copyrights.",
+    details: ["Trade Marks", "Patents", "Copyright"]
+  },
+  {
+    icon: <Scale size={32} />,
+    title: "Estate Planning",
+    desc: "Dedicated department for estate planning, inheritance, trusts, and succession.",
+    details: ["Wills", "Trusts", "Inheritance"]
+  },
+  {
+    icon: <Building2 size={32} />,
+    title: "Corporate Services",
+    desc: "Expertise in company registrations, secretarial services, and statutory compliance.",
+    details: ["Company Registration", "Statutory Returns", "Secretarial"]
+  },
+  {
+    icon: <Landmark size={32} />,
+    title: "Debt Recovery",
+    desc: "Proven and effective approach to debt recovery using efficient practices.",
+    details: ["Debt Collection", "Legal Action", "Recovery Strategy"]
+  },
+  {
+    icon: <Users2 size={32} />,
+    title: "Employment & Labour",
+    desc: "Comprehensive and innovative advice on all aspects of employment-related issues.",
+    details: ["Labour Disputes", "Contracts", "Retrenchments"]
   }
 ];
 

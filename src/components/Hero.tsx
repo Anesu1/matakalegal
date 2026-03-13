@@ -59,7 +59,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className={styles.description}
             >
-              Providing outstanding, competitive, and timely legal services in Zimbabwe across all practice areas.
+              At our firm, we pride ourselves on delivering outstanding legal services that are both competitive and timely. Our expertise spans a wide range of practice areas, including litigation, conveyancing, family law, labor law, real estate, administration, estate planning, intellectual property law, notarial services, and commercial practice.
             </motion.p>
 
             <motion.div 
@@ -83,8 +83,8 @@ export default function Hero() {
               className={styles.imageMain}
             >
               <img 
-                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop" 
-                alt="Justice" 
+                src="/images/Conveyancing-Real-Estate-Mataka-Legal-Practice-Website.webp" 
+                alt="Mataka Legal Practice Excellence" 
               />
             </motion.div>
             

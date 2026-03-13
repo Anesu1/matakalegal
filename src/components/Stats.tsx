@@ -5,9 +5,9 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import styles from "./Stats.module.css";
 
 const stats = [
-  { value: 20, suffix: "+", label: "YEARS OF EXCELLENCE", desc: "A storied history of legal brilliance." },
-  { value: 1000, suffix: "+", label: "CASES RESOLVED", desc: "Navigating complexity with surgical precision." },
-  { value: 500, suffix: "+", label: "PROPERTY TRANSFERS", desc: "Ensuring secure and timely conveyancing." }
+  { value: 15, suffix: "+", label: "YEARS OF EXPERIENCE", desc: "Drawing on a rich heritage of legal excellence since 2008." },
+  { value: 1000, suffix: "+", label: "CASES RESOLVED", desc: "Navigating complexity with surgical precision and integrity." },
+  { value: 500, suffix: "+", label: "PROPERTY TRANSFERS", desc: "Ensuring secure and timely conveyancing across Zimbabwe." }
 ];
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {

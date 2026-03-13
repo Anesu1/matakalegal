@@ -7,12 +7,11 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 const MatakaLogo = () => (
-  <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 35L15 5L25 35" stroke="#204A67" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M12 25L18 25" stroke="#73B8B8" strokeWidth="4" strokeLinecap="round"/>
-    <text x="35" y="25" fill="#204A67" style={{ font: "bold 22px Geist, sans-serif" }}>Mataka</text>
-    <text x="35" y="38" fill="#73B8B8" style={{ font: "300 11px Geist, sans-serif", letterSpacing: "0.1em" }}>LEGAL PRACTICE</text>
-  </svg>
+  <img 
+    src="/images/logo.webp" 
+    alt="Mataka Legal Practice" 
+    style={{ height: "40px", width: "auto", objectFit: "contain" }} 
+  />
 );
 
 const navLinks = [

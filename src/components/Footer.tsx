@@ -5,12 +5,11 @@ import { Facebook, Twitter, Linkedin, Instagram, ArrowUp } from "lucide-react";
 import styles from "./Footer.module.css";
 
 const MatakaLogo = () => (
-  <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 35L15 5L25 35" stroke="#204A67" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M12 25L18 25" stroke="#73B8B8" strokeWidth="4" strokeLinecap="round"/>
-    <text x="35" y="25" fill="#204A67" style={{ font: "bold 22px Geist, sans-serif" }}>Mataka</text>
-    <text x="35" y="38" fill="#73B8B8" style={{ font: "300 11px Geist, sans-serif", letterSpacing: "0.1em" }}>LEGAL PRACTICE</text>
-  </svg>
+  <img 
+    src="/images/logo.webp" 
+    alt="Mataka Legal Practice" 
+    style={{ height: "45px", width: "auto", objectFit: "contain" }} 
+  />
 );
 
 export default function Footer() {
@@ -43,16 +42,16 @@ export default function Footer() {
             </div>
             <div className={styles.group}>
               <h4 className={styles.groupTitle}>PRACTICE</h4>
-              <Link href="#">Litigation</Link>
-              <Link href="#">Conveyancing</Link>
-              <Link href="#">Corporate Law</Link>
-              <Link href="#">Intellectual Property</Link>
+              <Link href="/services">Property Law</Link>
+              <Link href="/services">Civil Litigation</Link>
+              <Link href="/services">Mining Law</Link>
+              <Link href="/services">Estate Planning</Link>
             </div>
             <div className={styles.group}>
               <h4 className={styles.groupTitle}>OFFICE</h4>
               <p>28 Northampton Crescent</p>
-              <p>Eastlea, Harare, ZW</p>
-              <p>+263 242 746169</p>
+              <p>Eastlea, Harare, Zimbabwe</p>
+              <p>+263 242 746169 | 749431</p>
               <p>info@matakalegal.co.zw</p>
             </div>
           </div>
@@ -60,7 +59,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <div className={styles.bottomLeft}>
-            <p>© 2026 MATAKA LEGAL PRACTICE. ALL RIGHTS RESERVED.</p>
+            <p>© 2026 MATAKA LEGAL PRACTICE. ALL RIGHTS RESERVED. WEBSITE BY KHUYAMEDIA</p>
           </div>
           <div className={styles.bottomRight}>
             <button onClick={scrollToTop} className={styles.scrollTop}>

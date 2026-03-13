@@ -129,7 +129,7 @@
   padding: 30px;
   border-radius: 4px;
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--ice-blue);
 }
 
 .cardHeader {
