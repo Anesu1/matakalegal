@@ -1,6 +1,6 @@
 .stats {
   padding: 200px 0;
-  background: #fdfdfd;
+  background: white;
   border-top: 1px solid var(--border-color);
   position: relative;
   overflow: visible !important;

@@ -5,21 +5,13 @@
 .hero {
   padding-top: 220px;
   padding-bottom: 120px;
-  background: #fbfbfb;
+  background: white;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(115, 184, 184, 0.05));
-  pointer-events: none;
-}
+
 
 .label {
   font-size: 11px;
@@ -198,8 +190,10 @@
 
 /* FAQ */
 .faqSection {
-  background: #f8f8f8;
+  background: white;
   padding: 140px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .faqGrid {

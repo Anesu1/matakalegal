@@ -12,6 +12,9 @@
   overflow: hidden;
   padding-top:100px;
   padding: 0 var(--container-padding);
+  @media(min-width:678px){
+    height: auto;
+  }
 }
 
 .heroContent {
@@ -41,7 +44,7 @@
 .heroImageWrapper {
   width: 100%;
   max-width: 1200px;
-  aspect-ratio: 16/7;
+  aspect-ratio: 16/9;
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
@@ -51,11 +54,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%;
 }
 
 .philosophy {
   padding: var(--section-padding) 0;
-  background: #fcfcfc;
+  background: white;
   border-top: 1px solid var(--border-color);
 }
 
@@ -158,6 +162,50 @@
 
 .word {
   display: inline-block;
+}
+
+.missionPillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 80px;
+}
+
+.pillar {
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  background: white;
+}
+
+.pillarTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.pillarText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--secondary-text);
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .missionPillars {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
 @media (max-width: 1024px) {

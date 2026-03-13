@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { 
+  Map, 
+  MapMarker, 
+  MarkerContent, 
+  MarkerPopup, 
+  MapControls 
+} from "@/components/ui/map";
 import styles from "./Contact.module.css";
 
 export default function ContactPage() {
@@ -85,6 +92,65 @@ export default function ContactPage() {
               </div>
               <button type="submit" className={styles.submitBtn}>SEND MESSAGE</button>
             </motion.form>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.mapSection}>
+        <div className="container">
+          <div className={styles.mapContainer}>
+            <Map 
+              center={[31.0672, -17.8181]}
+              zoom={15}
+              theme="light"
+            >
+              <MapMarker longitude={31.0672} latitude={-17.8181}>
+                <MarkerContent>
+                  <div className="relative group">
+                    <div className="absolute -inset-4 bg-[#5FB9C4]/20 rounded-full animate-ping" />
+                    <div className="relative flex items-center justify-center">
+                      <div className="size-10 bg-[#1B4F72] rounded-full border-4 border-white shadow-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                        <MapPin className="size-5 text-white" />
+                      </div>
+                      <div className="absolute top-[100%] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[10px] border-t-[#1B4F72]" />
+                    </div>
+                  </div>
+                </MarkerContent>
+                <MarkerPopup>
+                  <div className="p-4 min-w-[280px]">
+                    <h4 className="font-bold text-lg mb-2 text-[#1B4F72]">Mataka Legal Practice</h4>
+                    <p className="text-sm text-slate-600 mb-3 leading-relaxed">
+                      28 Northampton Crescent, <br /> Eastlea, Harare
+                    </p>
+                    <div className="flex flex-col gap-1 mb-4">
+                      <div className="flex items-center gap-2 text-xs text-slate-500">
+                        <Phone className="size-3 text-[#5FB9C4]" />
+                        <span>+263 242 746169</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-xs text-slate-500">
+                        <Clock className="size-3 text-[#5FB9C4]" />
+                        <span>Mon – Fri: 08:00 – 17:00</span>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://www.google.com/maps/dir/?api=1&destination=-17.8181,31.0672" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-bold text-[#5FB9C4] hover:text-[#1B4F72] transition-colors"
+                    >
+                      <span>GET DIRECTIONS</span>
+                      <motion.span 
+                        animate={{ x: [0, 5, 0] }} 
+                        transition={{ repeat: Infinity, duration: 1.5 }}
+                      >
+                        →
+                      </motion.span>
+                    </a>
+                  </div>
+                </MarkerPopup>
+              </MapMarker>
+              <MapControls position="bottom-right" />
+            </Map>
           </div>
         </div>
       </section>

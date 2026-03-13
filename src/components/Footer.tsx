@@ -59,7 +59,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <div className={styles.bottomLeft}>
-            <p>© 2026 MATAKA LEGAL PRACTICE. ALL RIGHTS RESERVED. WEBSITE BY KHUYAMEDIA</p>
+            <p>© 2026 MATAKA LEGAL PRACTICE. ALL RIGHTS RESERVED. WEBSITE BY REVIXIONS</p>
           </div>
           <div className={styles.bottomRight}>
             <button onClick={scrollToTop} className={styles.scrollTop}>

@@ -4,7 +4,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: radial-gradient(circle at 90% 10%, rgba(115, 184, 184, 0.05) 0%, transparent 40%);
+  background: white;
 }
 
 .heroGrid {

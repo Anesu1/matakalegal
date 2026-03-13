@@ -7,62 +7,9 @@ import Footer from "@/components/Footer";
 import { Landmark, Gavel, ShieldCheck, Users2, FileText, Pickaxe, Handshake, Scale, Building2 } from "lucide-react";
 import styles from "./ServicesPage.module.css";
 
-const services = [
-  {
-    icon: <Landmark size={40} />,
-    title: "Property Law & Conveyancing",
-    desc: "Comprehensive handling of real estate transactions, transfers, and mortgage bonds.",
-    details: "Expertise in residential and commercial transfers, mortgage bond registration, and sectional title processing."
-  },
-  {
-    icon: <Gavel size={40} />,
-    title: "Civil Litigation & ADR",
-    desc: "Expert representation in court and alternative dispute resolution methods.",
-    details: "Strategy-focused litigation and mediation for commercial, civil, and corporate disputes."
-  },
-  {
-    icon: <Scale size={40} />,
-    title: "Criminal Law",
-    desc: "Robust defense services for a wide range of criminal matters.",
-    details: "Defending rights across the judicial spectrum with thorough investigation and expert advocacy."
-  },
-  {
-    icon: <Users2 size={40} />,
-    title: "Family Law & Divorce",
-    desc: "Sensitive handling of matrimonial, maintenance, and inheritance issues.",
-    details: "Compassionate legal support for divorce, custody, and matrimonial property division."
-  },
-  {
-    icon: <ShieldCheck size={40} />,
-    title: "Intellectual Property",
-    desc: "Protecting innovation through trademark, patent, and copyright law.",
-    details: "Securing your intangible assets and navigating IPO regulations in Zimbabwe."
-  },
-  {
-    icon: <FileText size={40} />,
-    title: "Estate Administration",
-    desc: "Management of wills, trusts, and deceased estates.",
-    details: "Preserving family legacies through meticulous estate planning and administration."
-  },
-  {
-    icon: <Handshake size={40} />,
-    title: "Employment & Labour",
-    desc: "Legal counsel for both employers and employees on workplace regulations.",
-    details: "Navigating the Labour Act, retrenchments, and collective bargaining agreements."
-  },
-  {
-    icon: <Building2 size={40} />,
-    title: "Corporate Law",
-    desc: "Empowering businesses with sound legal structures and compliance.",
-    details: "M&A, company secretarial services, and corporate governance solutions."
-  },
-  {
-    icon: <Pickaxe size={40} />,
-    title: "Mining Law",
-    desc: "Specialized legal support for the Zimbabwean mining sector.",
-    details: "Advising on mining rights, joint ventures, and regulatory compliance in Zimbabwe's extractive industry."
-  }
-];
+import Link from "next/link";
+import { servicesData } from "@/data/services";
+import * as Icons from "lucide-react";
 
 export default function ServicesPage() {
   const containerRef = useRef(null);
@@ -90,23 +37,38 @@ export default function ServicesPage() {
       <section className={styles.listSection}>
         <div className="container">
           <div className={styles.listGrid}>
-            {services.map((service, index) => (
-              <motion.div 
-                key={service.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={styles.serviceItem}
-              >
-                <div className={styles.serviceIcon}>{service.icon}</div>
-                <div className={styles.serviceContent}>
-                  <h2 className={styles.serviceTitle}>{service.title}</h2>
-                  <p className={styles.serviceDesc}>{service.desc}</p>
-                  <div className={styles.serviceDetail}>{service.details}</div>
-                </div>
-              </motion.div>
-            ))}
+            {servicesData.map((service, index) => {
+              const IconComponent = (Icons as any)[service.iconName];
+              return (
+                <Link 
+                  href={`/services/${service.id}`}
+                  key={service.id}
+                  className="group"
+                >
+                  <motion.div 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    className={styles.serviceItem}
+                  >
+                    <div className={styles.serviceIcon}>
+                      <IconComponent size={40} />
+                    </div>
+                    <div className={styles.serviceContent}>
+                      <h2 className={styles.serviceTitle}>{service.title}</h2>
+                      <p className={styles.serviceDesc}>{service.desc}</p>
+                      <div className={styles.serviceDetail}>
+                        {service.details.slice(0, 4).join(" • ")}
+                      </div>
+                      <div className="mt-6 flex items-center gap-2 text-sm font-bold text-[#5FB9C4] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
+                        LEARN MORE <Icons.ArrowRight size={16} />
+                      </div>
+                    </div>
+                  </motion.div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

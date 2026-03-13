@@ -5,68 +5,11 @@ import { useRef } from "react";
 import { ArrowUpRight, ShieldCheck, Gavel, Building2, Landmark, Users2, FileText, Scale, Pickaxe } from "lucide-react";
 import styles from "./Services.module.css";
 
-const practiceAreas = [
-  {
-    icon: <Landmark size={32} />,
-    title: "Property Law & Conveyancing",
-    desc: "Our Conveyancing Department handles all aspects relating to property law in Zimbabwe, including notarial work.",
-    details: ["Property Transfers", "Notarial Bonds", "Agreements of Sale"]
-  },
-  {
-    icon: <Gavel size={32} />,
-    title: "Civil Litigation & ADR",
-    desc: "Focusing on disputes that either reach the High Court or are resolved by arbitration.",
-    details: ["Commercial Disputes", "Arbitration", "High Court Matters"]
-  },
-  {
-    icon: <ShieldCheck size={32} />,
-    title: "Criminal Law",
-    desc: "Expert legal representation involving rights of the accused and the criminal process.",
-    details: ["Bail Applications", "Trials", "Pre-trial Hearings"]
-  },
-  {
-    icon: <Users2 size={32} />,
-    title: "Family Law & Divorce",
-    desc: "Practical solutions to complex problems, protecting interests in difficult personal challenges.",
-    details: ["Divorce Matters", "Child Custody", "Maintenance"]
-  },
-  {
-    icon: <Pickaxe size={32} />,
-    title: "Mining Law",
-    desc: "Assisting investors in developing Zimbabwe's rich mineral wealth through expert legal counsel.",
-    details: ["Investor Support", "Development", "Compliance"]
-  },
-  {
-    icon: <FileText size={32} />,
-    title: "Intellectual Property",
-    desc: "Registration, protection, and litigation of trade marks, patents, and copyrights.",
-    details: ["Trade Marks", "Patents", "Copyright"]
-  },
-  {
-    icon: <Scale size={32} />,
-    title: "Estate Planning",
-    desc: "Dedicated department for estate planning, inheritance, trusts, and succession.",
-    details: ["Wills", "Trusts", "Inheritance"]
-  },
-  {
-    icon: <Building2 size={32} />,
-    title: "Corporate Services",
-    desc: "Expertise in company registrations, secretarial services, and statutory compliance.",
-    details: ["Company Registration", "Statutory Returns", "Secretarial"]
-  },
-  {
-    icon: <Landmark size={32} />,
-    title: "Debt Recovery",
-    desc: "Proven and effective approach to debt recovery using efficient practices.",
-    details: ["Debt Collection", "Legal Action", "Recovery Strategy"]
-  },
-  {
-    icon: <Users2 size={32} />,
-    title: "Employment & Labour",
-    desc: "Comprehensive and innovative advice on all aspects of employment-related issues.",
-    details: ["Labour Disputes", "Contracts", "Retrenchments"]
-  }
-];
+import Link from "next/link";
+import { servicesData } from "@/data/services";
+
+// Define icons map for the data if needed or just use the data
+import * as Icons from "lucide-react";
 
 export default function Services() {
   const containerRef = useRef(null);
@@ -111,34 +54,39 @@ export default function Services() {
 
           <div className={styles.scrollingContent}>
             <div className={styles.grid}>
-              {practiceAreas.map((item, index) => (
-                <motion.div 
-                  key={index}
-                  className={styles.card}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, delay: index * 0.1, ease: [0.33, 1, 0.68, 1] }}
-                >
-                  <div className={styles.cardHeader}>
-                    <div className={styles.iconBox}>{item.icon}</div>
-                    <span className={styles.cardNumber}>0{index + 1}</span>
-                  </div>
-                  
-                  <h3 className={styles.cardTitle}>{item.title}</h3>
-                  <p className={styles.cardDesc}>{item.desc}</p>
-                  
-                  <div className={styles.featureGrid}>
-                    {item.details.map((detail, idx) => (
-                      <div key={idx} className={styles.featureTag}>{detail}</div>
-                    ))}
-                  </div>
+              {servicesData.map((item, index) => {
+                const IconComponent = (Icons as any)[item.iconName];
+                return (
+                  <motion.div 
+                    key={item.id}
+                    className={styles.card}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8, delay: index * 0.1, ease: [0.33, 1, 0.68, 1] }}
+                  >
+                    <div className={styles.cardHeader}>
+                      <div className={styles.iconBox}>
+                        <IconComponent size={32} />
+                      </div>
+                      <span className={styles.cardNumber}>0{index + 1}</span>
+                    </div>
+                    
+                    <h3 className={styles.cardTitle}>{item.title}</h3>
+                    <p className={styles.cardDesc}>{item.desc}</p>
+                    
+                    <div className={styles.featureGrid}>
+                      {item.details.slice(0, 3).map((detail, idx) => (
+                        <div key={idx} className={styles.featureTag}>{detail}</div>
+                      ))}
+                    </div>
 
-                  <button className={styles.cardLink}>
-                    CASE DETAILS <ArrowUpRight size={16} />
-                  </button>
-                </motion.div>
-              ))}
+                    <Link href={`/services/${item.id}`} className={styles.cardLink}>
+                      VIEW DETAILS <ArrowUpRight size={16} />
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -52,7 +52,8 @@
   overflow: hidden;
   border-radius: 4px;
   margin-bottom: 25px;
-  background: #f0f0f0;
+  background: white;
+  border: 1px solid var(--border-color);
 }
 
 .image {
