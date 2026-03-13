@@ -1,0 +1,128 @@
+.stats {
+  padding: 200px 0;
+  background: #fdfdfd;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  overflow: visible !important;
+}
+
+.stickyLayout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 120px;
+  min-height: 200vh; /* Massive runway for pinning */
+  position: relative;
+}
+
+.sidebar {
+  position: relative;
+  height: 100%; /* Match parent height to allow sticky travel */
+}
+
+.stickyBox {
+  position: sticky;
+  top: 15vh; /* Responsive top offset */
+  display: flex;
+  gap: 40px;
+  height: max-content;
+}
+
+.progressLine {
+  width: 2px;
+  height: 200px;
+  background: var(--border-color);
+  position: relative;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.progressFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--accent-teal);
+  border-radius: 2px;
+}
+
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--accent-blue);
+  margin-bottom: 30px;
+}
+
+.desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--secondary-text);
+  max-width: 440px;
+  font-weight: 300;
+}
+
+.scrollingList {
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+}
+
+.statItem {
+  display: flex;
+  gap: 60px;
+  min-height: 500px;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 100px;
+}
+
+.numberWrapper {
+  font-size: clamp(80px, 10vw, 150px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--accent-teal);
+  min-width: 250px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.statLabel {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--accent-blue);
+  margin-bottom: 15px;
+  letter-spacing: -0.02em;
+}
+
+.statDesc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--secondary-text);
+  max-width: 400px;
+  font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .stickyLayout {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+  .stickyBox {
+    position: static;
+  }
+  .statItem {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,177 @@
+.main {
+  background: white;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top:100px;
+  padding: 0 var(--container-padding);
+}
+
+.heroContent {
+  text-align: center;
+  padding-top:100px;
+  z-index: 2;
+  margin-bottom: 60px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--accent-teal);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  color: var(--accent-blue);
+}
+
+.heroImageWrapper {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 16/7;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.philosophy {
+  padding: var(--section-padding) 0;
+  background: #fcfcfc;
+  border-top: 1px solid var(--border-color);
+}
+
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 100px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.secTitle {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--accent-blue);
+  margin-bottom: 40px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNum {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--accent-teal);
+}
+
+.statLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--secondary-text);
+}
+
+.secDesc {
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--secondary-text);
+  margin-bottom: 60px;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.valueItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.valueIdx {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-teal);
+}
+
+.valueName {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent-blue);
+}
+
+.mission {
+  padding: var(--section-padding) 0;
+  background: white;
+}
+
+.missionWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.revealText {
+  font-size: clamp(24px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--accent-blue);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wordWrapper {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.word {
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .philosophyGrid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .values {
+    grid-template-columns: 1fr;
+  }
+  .heroImageWrapper {
+    aspect-ratio: 4/3;
+  }
+}

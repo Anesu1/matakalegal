@@ -1,0 +1,95 @@
+.section {
+  padding: 150px 0;
+  background: var(--background);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.introBox {
+  background: var(--accent-green);
+  padding: 60px 40px;
+  border-radius: 2px;
+  color: white; /* Force white text on deep blue */
+}
+
+.introText {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: inherit;
+}
+
+.sliderCol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sliderContent {
+  min-height: 250px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.quote {
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 300;
+  color: var(--foreground);
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.role {
+  font-size: 14px;
+  color: var(--secondary-text);
+  font-weight: 300;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+}
+
+.controlBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  transition: all 0.3s ease;
+}
+
+.controlBtn:hover {
+  background: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .quote {
+    font-size: 24px;
+  }
+}
