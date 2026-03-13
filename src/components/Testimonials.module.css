@@ -11,7 +11,7 @@
 }
 
 .introBox {
-  background: var(--accent-green);
+  background: var(--accent-blue);
   padding: 60px 40px;
   border-radius: 2px;
   color: white; /* Force white text on deep blue */
